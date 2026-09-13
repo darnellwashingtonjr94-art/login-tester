@@ -32,3 +32,18 @@
     "region": "us-east-1"
   }
 }
+  "ai_config": {
+    "gemini_api_key": "YOUR_GEMINI_API_KEY",
+    "model_version": "gemini-pro"
+  },
+  "defense_config": {
+    "firewall": {
+      "blocked_ips": ["192.168.1.100", "10.0.0.5"],
+      "max_connections_per_ip": 5
+    },
+    "honeypots": {
+      "ssh_port": 2222,
+      "web_port": 8080,
+      "ftp_port": 2121
+    }
+  }
