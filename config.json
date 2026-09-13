@@ -1,5 +1,9 @@
 {
   "local_output_path": "outputs/saved_credentials.txt",
+  "media_output": {
+    "screenshots_dir": "outputs/screenshots/",
+    "recordings_dir": "outputs/recordings/"
+  },
   "proxy": {
     "enabled": true,
     "http": "socks5://127.0.0.1:9050",
