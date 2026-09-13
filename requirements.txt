@@ -10,3 +10,4 @@ SpeechRecognition>=3.10.0
 PyAudio>=0.2.14
 scikit-image>=0.22.0
 google-generativeai>=0.4.0
+paramiko>=3.3.1
