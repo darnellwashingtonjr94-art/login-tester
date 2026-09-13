@@ -1,5 +1,10 @@
 {
   "local_output_path": "outputs/saved_credentials.txt",
+  "biometrics_config": {
+    "reference_face": "outputs/biometrics_data/reference_face.jpg",
+    "reference_fingerprint": "outputs/biometrics_data/reference_print.png",
+    "audio_sample_dir": "outputs/biometrics_data/audio/"
+  },
   "media_output": {
     "screenshots_dir": "outputs/screenshots/",
     "recordings_dir": "outputs/recordings/"
