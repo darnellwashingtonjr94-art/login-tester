@@ -1,27 +1,18 @@
-# Login Tester
-
-A lightweight, ethical security auditing script built in Python for testing default credentials and handling automated response analysis against target login endpoints. Designed specifically for mobile reconnaissance workflows using Alpine Linux (iSH) on iOS.
-
-## Features
-
-* **Automated Credential Testing**: Rapidly iterates through common default credential pairs (e.g., `admin:admin`, `root:root`).
-* **Smart Content Analysis**: Parses response body text to flag invalid authentication states and prevent false positives.
-* **Endpoint Tracking**: Captures the final redirection URL for every login attempt.
-* **Rich CLI Interface**: Utilizes the `rich` library to render clean, structured tables directly in the terminal.
-
-## Prerequisites
-
-* Python 3
-* `requests` library
-* `rich` library
-
-## Installation
-
-Clone the repository to your local environment:
-
-```bash
-git clone [https://github.com/sirtruth/login-tester.git](https://github.com/sirtruth/login-tester.git)
-cd login-tester
-
-**Disclaimer
-This tool is created strictly for educational purposes, portfolio demonstration, and authorized security auditing on sandboxed environments (such as ⁠http://zero.webappsecurity.com⁠). Do not use against unauthorized targets.**
+Login-Tester & Cyber Shield
+What is this about?
+This project is a two-in-one security robot for your computer and websites. It acts like a friendly lock-picker to test if your real doors are safe, and it builds fake doors to trap bad guys who try to sneak in.
+What this does?
+First, it tries common usernames and passwords to see if it can break into your website, warning you about weak locks. Second, it sets up three fake computer traps (SSH, Web, and FTP). If a hacker attacks these fake traps, a digital bouncer (firewall) catches them, and a super-smart AI brain (Gemini Pro) analyzes exactly what the hacker was trying to do. It also uses your camera and microphone to check faces, voices, or fingerprints to make sure only you can use the tool.
+How does this work?
+It uses a fast computer script to test passwords while hiding its location with a disguise (VPN or proxy). On the defense side, the firewall stands in front of the traps. When hackers interact with the traps, they leave digital footprints. The Gemini AI reads these footprints and writes a simple report. Whenever it finds a weak password or catches a hacker, it instantly texts, emails, or calls you, and records a video of the screen to save as proof.
+Why is this cool?
+It is cool because it plays offense and defense at the same time. You get spy-movie features like eye scanners and automatic screen recording, plus a smart AI that explains hacker attacks to you as they happen—all while tricking the bad guys into attacking a fake target instead of your real files.
+What problems this solves?
+People often forget to change factory passwords, which leaves the door open for hackers. This tool finds those weak spots so you can fix them first. It also solves the problem of not knowing how hackers operate, because the fake doors safely trap them and the AI translates their secret tricks into plain English for you.
+How to install this?
+ Open your computer's terminal (the black command screen).
+ Download the project folder by typing: ⁠git clone [https://github.com/credkellar-boop/login-tester.git](https://github.com/credkellar-boop/login-tester.git)⁠
+ Move inside the folder by typing: ⁠cd login-tester⁠
+ Tell your computer to install the needed parts by typing: ⁠pip install -r requirements.txt⁠
+ Open the ⁠config.json⁠ file and put in your phone numbers, Gemini AI key, email passwords, and biometric file paths.
+ Start the robot by typing: ⁠python main.py⁠
