@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  login-tester:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: credkellar/login-tester:latest
+    container_name: login-tester-app
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    # volumes:
+    #   - .:/app  # Uncomment for local development/hot-reloading
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
