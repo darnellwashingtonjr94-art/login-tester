@@ -1,0 +1,42 @@
+name: Login-Tester & Cyber Shield CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Grab the latest code from the repository
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    # 2. Set up the Python environment
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.10"
+        cache: 'pip'
+
+    # 3. Install necessary system packages for OpenCV and Biometrics
+    - name: Install System Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cmake libgl1-mesa-glx python3-opencv portaudio19-dev
+
+    # 4. Install the project's Python requirements
+    - name: Install Python Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    # 5. Check for critical Python syntax errors
+    - name: Lint with Flake8
+      run: |
+        pip install flake8
+        # Stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
